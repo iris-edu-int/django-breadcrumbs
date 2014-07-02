@@ -8,7 +8,8 @@ from views import flatpage
 class BreadcrumbsMiddleware(object):
 
     def process_request(self, request):
-        request.breadcrumbs = Breadcrumbs()
+        if not hasattr(request, 'breadcrumbs'):
+            request.breadcrumbs = Breadcrumbs()
 
 
 class FlatpageFallbackMiddleware(object):
