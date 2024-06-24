@@ -6,7 +6,8 @@ TODO: maybe is better to move to contrib/breadcrumbs
 
 from django.conf import settings
 from django.utils.safestring import mark_safe
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
+
 try:
     from django.utils import six
 except ImportError:
